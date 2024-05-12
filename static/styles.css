@@ -36,7 +36,7 @@ body {
     border-radius: 5px;
     padding: 20px;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .radio-options {
@@ -53,6 +53,7 @@ body {
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-weight: bold;
+    margin-top: 20px;
 }
 
 textarea {
