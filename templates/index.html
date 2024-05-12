@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Processing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <form id="uploadForm" enctype="multipart/form-data">
+                <label for="fileUpload" class="custom-file-upload">
+                    Choose File
+                </label>
+                
+                <input type="file" id="fileUpload" name="fileUpload" accept="image/*" onchange="handleFileSelect(event)">
+
+                <div id="dropArea" class="drop-area" ondrop="handleDrop(event)" ondragover="handleDragOver(event)">
+                    <p>Drag &amp; Drop files here</p>
+                </div>
+                <div class="radio-options">
+                    <input type="radio" id="captionOption" name="option" value="caption">
+                    <label for="captionOption">Caption</label>
+                    <input type="radio" id="talkToMeOption" name="option" value="talk">
+                    <label for="talkToMeOption">Talk to Me!</label>
+                </div>
+                <button type="submit" class="custom-submit-button">Submit</button>
+            </form>
+        </div>
+        <div class="right">
+            <textarea id="output" readonly></textarea>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
